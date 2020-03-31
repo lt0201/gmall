@@ -1,0 +1,8 @@
+@Configuration
+public class SecurityConfig extends WebSecurityConfigurerAdapter{
+    @Bean
+    protected void configuration(HttpSecurity http){
+        http.authorizeRequests().antMatchers("/**").permitAll();
+        http.csrf().disable();
+}
+}
